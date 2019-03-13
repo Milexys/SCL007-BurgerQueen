@@ -6,6 +6,7 @@
     "firebase": "^5.8.6",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8"
   },
   "scripts": {
@@ -25,7 +26,9 @@
   ],
   "description": "## Preámbulo",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.3.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Milexys/SCL007-BurgerQueen.git"
