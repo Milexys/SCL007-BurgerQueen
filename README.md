@@ -45,7 +45,7 @@ nos comparten el siguiente correo recibido del cliente:
 >     </tr>
 >     <tr>
 >       <td>Doble</td>
->       <td>$2500/td>
+>       <td>$2500</td>
 >       <td>Onion Rings</td>
 >       <td>Agua</td>
 >       <td>$500</td>
