@@ -1,18 +1,14 @@
-import * as firebase from 'firebase';
-import firestore from 'firebase/firestore'
+import firebase from 'firebase/app';
+import 'firebase/app';
+import 'firebase/firestore';
 
-const settings = {timestampsInSnapshots: true};
-
-const config = {
+firebase.initializeApp({
     apiKey: "AIzaSyCzmJJVcoCMtkbGnz6MClhrn_nteobXLDA",
     authDomain: "burgerqueen-milexys.firebaseapp.com",
     databaseURL: "https://burgerqueen-milexys.firebaseio.com",
     projectId: "burgerqueen-milexys",
-    storageBucket: "burgerqueen-milexys.appspot.com",
-    messagingSenderId: "619398458604"
-  };
-  firebase.initializeApp(config);
+  });
 
-firebase.firestore().settings(settings);
+let db = firebase.firestore();
 
-export default firebase;
+export default db;
