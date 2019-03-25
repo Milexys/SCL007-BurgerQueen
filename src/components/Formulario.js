@@ -24,6 +24,7 @@ constructor(){
         })
         db.collection("clientes").add({
             clientName: this.state.name,
+            food: this.props.order
         }).then(() => {
             console.log("enviado");
         })
@@ -34,13 +35,27 @@ constructor(){
 
     render(){
         return (
-            <div className="jumbotron mt-2">
                 <form onSubmit={this.handleData}>
                     <label>Nombre del Cliente: </label>
                     <input ref={this.searchRef} type="text" className="form-control" onChange={this.handleChange} />
+                            {this.props.order.map((item, i) => {
+                                return (
+                                    <div key={i} className="row">
+                                        <div className="col-md-6">
+                                            {item.name}
+                                        </div>
+                                        <div className="col-md-6">
+                                            ${item.cost}
+                                        </div>
+                                </div>
+                                )
+                            })}
+                        
+                    
+                    
                     <input type="submit" className="btn btn-info mt-2" value="SUBMIT" />
+                    
                 </form>
-            </div>
         )
     }
 }

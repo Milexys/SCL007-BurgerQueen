@@ -1,14 +1,13 @@
 {
-  "main.css": "/Milexys/SCL007-BurgerQueen/static/css/main.b8e772f6.chunk.css",
-  "main.js": "/Milexys/SCL007-BurgerQueen/static/js/main.22354fb3.chunk.js",
-  "main.js.map": "/Milexys/SCL007-BurgerQueen/static/js/main.22354fb3.chunk.js.map",
-  "runtime~main.js": "/Milexys/SCL007-BurgerQueen/static/js/runtime~main.dbe61344.js",
-  "runtime~main.js.map": "/Milexys/SCL007-BurgerQueen/static/js/runtime~main.dbe61344.js.map",
-  "static/js/2.948d4d77.chunk.js": "/Milexys/SCL007-BurgerQueen/static/js/2.948d4d77.chunk.js",
-  "static/js/2.948d4d77.chunk.js.map": "/Milexys/SCL007-BurgerQueen/static/js/2.948d4d77.chunk.js.map",
-  "index.html": "/Milexys/SCL007-BurgerQueen/index.html",
-  "precache-manifest.edeb85fba1d6e2ff1a50997cd16bd22c.js": "/Milexys/SCL007-BurgerQueen/precache-manifest.edeb85fba1d6e2ff1a50997cd16bd22c.js",
-  "service-worker.js": "/Milexys/SCL007-BurgerQueen/service-worker.js",
-  "static/css/main.b8e772f6.chunk.css.map": "/Milexys/SCL007-BurgerQueen/static/css/main.b8e772f6.chunk.css.map",
-  "static/media/logo.svg": "/Milexys/SCL007-BurgerQueen/static/media/logo.5d5d9eef.svg"
+  "main.css": "/static/css/main.1fb586c2.chunk.css",
+  "main.js": "/static/js/main.2b122cea.chunk.js",
+  "main.js.map": "/static/js/main.2b122cea.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.c5541365.js",
+  "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
+  "static/js/2.17b9c4e7.chunk.js": "/static/js/2.17b9c4e7.chunk.js",
+  "static/js/2.17b9c4e7.chunk.js.map": "/static/js/2.17b9c4e7.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.4f9a0252f1b99884e3cb4669334e2a5e.js": "/precache-manifest.4f9a0252f1b99884e3cb4669334e2a5e.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.1fb586c2.chunk.css.map": "/static/css/main.1fb586c2.chunk.css.map"
 }

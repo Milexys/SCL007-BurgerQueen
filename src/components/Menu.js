@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { plates } from '../todo.json'
-import Formulario from '../components/Formulario'
+
 
 
 class Menu extends Component {
@@ -38,34 +38,27 @@ console.log(this.props.name)
 }
     render() {
         return(
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-6">
-                        <button className="btn btn-lg btn-warning mt-2" onClick={this.handleBreakfastButton}>Desayuno</button>
-                        <button className="btn btn-lg btn-warning ml-2 mt-2" onClick={this.handleLunchButton}>Almuerzo y Cena</button>
-                        <div className="row">
-                        {this.state.toShow.map((plate, i) => {
-                            return(
-                                    <div key={i} className="col-md-4">
-                                        <button className="btn btn-success btn-lg mt-2" onClick={()=>{
-                                            const name = plate.name;
-                                            const cost = plate.cost;
-                                            this.props.items(name, cost);
-                                        }}>
+            <div className="menu">
+                <button className="btn btn-lg btn-warning mt-2" onClick={this.handleBreakfastButton}>Desayuno</button>
+                <button className="btn btn-lg btn-warning ml-2 mt-2" onClick={this.handleLunchButton}>Almuerzo y Cena</button>
+                    <div className="row">
+                    {this.state.toShow.map((plate, i) => {
+                        return(
+                            <div key={i} className="col-md-4">
+                                <button className="btn btn-success btn-lg mt-2" onClick={()=>{
+                                    const name = plate.name;
+                                    const cost = plate.cost;
+                                    this.props.items(name, cost);
+                                    }}>
                                             { plate.name } <br/>
                                             ${plate.cost} 
-                                        </button>
-                                    </div>
+                                </button>
+                            </div>
                                 )
                             })
                         }
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <Formulario />
                     </div>
                 </div>
-            </div>
         );
     }
 }

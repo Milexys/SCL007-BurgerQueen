@@ -4,10 +4,16 @@ class Navbar extends Component {
     render(){
     return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a className="navbar-brand" href="#">Burger Queen</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                <a className="navbar-brand" href="#">
+                    <img src="https://image.flaticon.com/icons/png/512/123/123278.png" width="30" height="30" className="mr-2" alt=""/>
+                    Burger Queen
+                </a>
+                <div className="form-inline my-2 my-lg-0">
+                    <a className="btn btn-success my-2 my-lg-0" href="/kitchen">
+                    Cocina
+                    <span className="badge bagde-pill badge-light ml-2">2</span>
+                    </a>
+                </div>
             </nav>
         );
     }
