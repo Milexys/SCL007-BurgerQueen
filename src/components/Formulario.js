@@ -22,7 +22,7 @@ constructor(){
         this.setState({
             name: "",
         })
-        db.collection("clientes").add({
+        db.doc("BurguerQueen/pedidos").set({
             clientName: this.state.name,
             food: this.props.order
         }).then(() => {
@@ -53,7 +53,7 @@ constructor(){
                         
                     
                     
-                    <input type="submit" className="btn btn-info mt-2" value="SUBMIT" />
+                    <input type="submit" className="btn btn-info mt-2" value="SUBMIT"/>
                     
                 </form>
         )
