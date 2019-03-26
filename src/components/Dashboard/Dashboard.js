@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import Menu from './Menu';
-import Formulario from './Formulario.js';
-import Kitchen from './Kitchen.js'
+import ClientMenu from './ClientMenu';
+import ClientOrder from './ClientOrder.js';
 
 
-export class Waiter extends Component {
+export class Dashboard extends Component {
   constructor(){
     super();
     this.state = {
@@ -24,11 +23,11 @@ export class Waiter extends Component {
     return (
       <div className="row">
           <div className="col-md-6">
-              <Menu items={this.handleFood}/>
+              <ClientMenu items={this.handleFood}/>
           </div>
           <div className="col-md-6">
             <div className="jumbotron mt-2">
-              <Formulario order={this.state.items}/>
+              <ClientOrder order={this.state.items}/>
             </div>
           </div>
       </div>
@@ -36,4 +35,4 @@ export class Waiter extends Component {
   }
 }
 
-export default Waiter;
+export default Dashboard;

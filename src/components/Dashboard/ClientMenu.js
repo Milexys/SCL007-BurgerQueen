@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { plates } from '../todo.json'
+import { plates } from '../../todo.json'
 
 
 
-class Menu extends Component {
+class ClientMenu extends Component {
   constructor(){
       super()
       this.state = {
@@ -62,4 +62,4 @@ console.log(this.props.name)
         );
     }
 }
-export default Menu;
+export default ClientMenu;
