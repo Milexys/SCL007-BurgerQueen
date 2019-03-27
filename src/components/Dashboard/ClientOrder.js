@@ -3,7 +3,6 @@ import ClientOrderList from './ClientListOrder';
 import db from '../../Firebase.js';
 
 class ClientOrder extends Component {
-    searchRef = React.createRef();
 constructor(){
     super();
     this.state = {
@@ -15,7 +14,7 @@ constructor(){
     handleChange = (e) => {
         e.preventDefault();
         this.setState({
-            name: this.searchRef.current.value,
+            name: e.target.value,
         })
     }
     handleData = (e) => {
@@ -37,7 +36,7 @@ constructor(){
         return (
                 <form onSubmit={this.handleData}>
                     <label>Nombre del Cliente: </label>
-                    <input ref={this.searchRef} type="text" className="form-control" onChange={this.handleChange} />
+                    <input type="text" className="form-control" onChange={this.handleChange} />
                     <div className="row">
                         <div className="col-md-6">
                             <p className="text-info">Items</p>

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { plates } from '../../todo.json'
-
-
+import { plates } from '../../todo.json';
 
 class ClientMenu extends Component {
   constructor(){
@@ -12,7 +10,6 @@ class ClientMenu extends Component {
       }
       this.handleBreakfastButton = this.handleBreakfastButton.bind(this);
       this.handleLunchButton = this.handleLunchButton.bind(this);
-      this.handleDataFood = this.handleDataFood.bind(this);
   }
   handleBreakfastButton(e){
       e.preventDefault();
@@ -22,20 +19,16 @@ class ClientMenu extends Component {
               return plate.type === "desayuno"
             })
       })
-}
-handleLunchButton(e){
-    e.preventDefault();
-    this.setState({
-        ...this.state,
-        toShow: this.state.plates.filter(plate => {
-            return plate.type === "restodia"
-        })
-    })  
-}
-handleDataFood(e){
-    e.preventDefault();
-console.log(this.props.name)
-}
+    }
+    handleLunchButton(e){
+        e.preventDefault();
+        this.setState({
+            ...this.state,
+            toShow: this.state.plates.filter(plate => {
+                return plate.type === "restodia"
+            })
+        })  
+    }
     render() {
         return(
             <div className="menu">

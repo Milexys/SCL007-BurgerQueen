@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
+import KitchenOrder from './KitchenOrder';  
+import { connect } from 'react-redux';
 
 
 class Kitchen extends Component{
-    render(){
+        render(){
+        const { menus } = this.props;
         return(
-            <div className="row mt-2">
-                <div className="col-md-3">
-                    <div className="card text-white bg-success mb-3">
-                        <div className="card-header">
-                            <span className="badge bagde-pill badge-warning mr-2">1</span>
-                            Milexys
-                        </div>
-                        <div className="card-body">
-                            <p className="card-text">Hamburguesa de Pollo Doble</p>
-                        </div>
-                    </div>
-                </div>
+            <div className="container">
+                <KitchenOrder menus={menus}/>
             </div>
         )
     }
 }
-export default Kitchen;
+
+const mapStateToProps = (state) =>{
+    return {
+        menus: state.menu.menus,
+    }
+}
+
+export default connect(mapStateToProps)(Kitchen);
