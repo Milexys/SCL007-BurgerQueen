@@ -1,5 +1,5 @@
 const initState = {
-    menus: [{
+    orders: [{
         clientName: 'Milexys',
         food: 'cafe',
     },
@@ -9,8 +9,8 @@ const initState = {
     }],
 };
 
-const menuReducer = (state = initState, action) => {
+const orderReducer = (state = initState, action) => {
  return state
 }
 
-export default menuReducer;
+export default orderReducer;

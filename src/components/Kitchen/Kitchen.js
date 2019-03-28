@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 
 class Kitchen extends Component{
         render(){
-        const { menus } = this.props;
+        const { orders } = this.props;
         return(
             <div className="container">
-                <KitchenOrder menus={menus}/>
+                <KitchenOrder orders={orders}/>
             </div>
         )
     }
@@ -16,7 +16,7 @@ class Kitchen extends Component{
 
 const mapStateToProps = (state) =>{
     return {
-        menus: state.menu.menus,
+        orders: state.order.orders,
     }
 }
 

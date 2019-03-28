@@ -1,20 +1,19 @@
 import React from 'react';
 
 
-const KitchenOrder = ({menus}) => {
+const KitchenOrder = ({orders}) => {
     return(
         <div className="row mt-2">
-           
-            {menus && menus.map((menu, i) =>{
+            {orders && orders.map((order, i) =>{
                 return ( 
                     <div className="col-md-3"  key={i}>               
                 <div className="card text-white bg-success mb-3">
                     <div className="card-header">
-                        {menu.clientName}
+                        {order.clientName}
                     </div>
                     <div className="card-body">
                         <p className="card-text">
-                        {menu.food}
+                        {order.food}
                         </p>
                     </div>
                 </div>
