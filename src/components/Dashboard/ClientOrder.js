@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ClientOrderList from './ClientListOrder';
-import db from '../../Firebase.js';
+import { addOrder } from '../../store/actions/orderActions';
+import { connect } from 'react-redux';
 
 class ClientOrder extends Component {
 constructor(){
@@ -19,18 +20,8 @@ constructor(){
     }
     handleData = (e) => {
         e.preventDefault();
-        this.setState({
-            name: "",
-        })
-        db.collection("pedidos").add({
-            clientName: this.state.name,
-            food: this.props.order
-        }).then(() => {
-            console.log("enviado");
-        })
-        .catch(() => {
-            console.error("error");
-        });
+        this.props.addOrder(this.state)
+
     }
     render(){
         return (
@@ -53,4 +44,9 @@ constructor(){
         )
     }
 }
-export default ClientOrder;
+const mapDispatchtoProps = (dispatch) => {
+    return {
+        addOrder: (order) => dispatch(addOrder(order))
+    }
+}
+export default connect(null, mapDispatchtoProps)(ClientOrder);

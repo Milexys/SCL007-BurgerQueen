@@ -10,6 +10,10 @@ const initState = {
 };
 
 const orderReducer = (state = initState, action) => {
+    switch (action.type){
+        case 'ADD_ORDER':
+        console.log('proyecto listo', action.order)
+    }
  return state
 }
 

@@ -9,6 +9,6 @@ firebase.initializeApp({
     projectId: "burgerqueen-milexys",
   });
 
-let db = firebase.firestore();
+firebase.firestore().settings({ timestampsInSnapshots: true });
 
-export default db;
+export default firebase;
