@@ -9,7 +9,7 @@ const KitchenOrder = ({orders}) => {
                     <div className="col-md-3"  key={i}>               
                 <div className="card text-white bg-success mb-3">
                     <div className="card-header">
-                        {order.clientName}
+                        {order.name}
                     </div>
                     <div className="card-body">
                         <p className="card-text">
