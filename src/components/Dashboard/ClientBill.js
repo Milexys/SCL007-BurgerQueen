@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 class ClientBill extends Component {
     render(){
-    console.log(this.props.orderResult)
     return (
         <div className="row">
             <div className="col-md-12">

@@ -27,7 +27,6 @@ constructor(){
         this.props.addOrder(this.state)
     }
     render(){
-        console.log(this.props.order)
         return (
                 <form onSubmit={this.handleData}>
                     <label>Nombre del Cliente: </label>
