@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ClientOrderList from './ClientListOrder';
+import ClientBill from './ClientBill'
 import { addOrder } from '../../store/actions/orderActions';
 import { connect } from 'react-redux';
 
@@ -8,14 +9,17 @@ constructor(){
     super();
     this.state = {
         name: "",
-    }
+        food: [],
+        }
     this.handleData = this.handleData.bind(this);
     this.handleChange = this.handleChange.bind(this);
 }
     handleChange = (e) => {
         e.preventDefault();
         this.setState({
+            ...this.state,
             name: e.target.value,
+            food: this.props.order.map(food => {return food.name})
         })
     }
     handleData = (e) => {
@@ -23,6 +27,7 @@ constructor(){
         this.props.addOrder(this.state)
     }
     render(){
+        console.log(this.props.order)
         return (
                 <form onSubmit={this.handleData}>
                     <label>Nombre del Cliente: </label>
@@ -38,6 +43,7 @@ constructor(){
                         </div>
                     </div>
                     <ClientOrderList orderList={this.props.order} />
+                    <ClientBill orderResult={this.props.order} />
                     <input type="submit" className="btn btn-info mt-2" value="SUBMIT"/>
                 </form>
         )
