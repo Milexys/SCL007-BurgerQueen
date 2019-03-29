@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class ClientListOrder extends Component{
+
+    deleteItem = (e) => {
+        e.preventDefault()
+        alert("no logro eliminarme D:")
+    }
     render(){
     return (
         <div>
@@ -14,7 +19,7 @@ class ClientListOrder extends Component{
                         ${item.cost}
                     </div>
                     <div className="col-md-2">
-                        <a href="#">
+                        <a href="#" onClick={this.deleteItem}>
                             <i className="material-icons">
                             cancel
                             </i>
