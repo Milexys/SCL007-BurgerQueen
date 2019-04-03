@@ -24,7 +24,7 @@ constructor(){
     }
     handleData = (e) => {
         e.preventDefault();
-        this.props.addOrder(this.state)
+        this.props.addOrder(this.state);
     }
     render(){
         return (

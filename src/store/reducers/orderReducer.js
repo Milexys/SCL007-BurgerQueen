@@ -1,12 +1,5 @@
 const initState = {
-    orders: [{
-        clientName: 'Milexys',
-        food: 'cafe',
-    },
-    {
-        clientName: 'Sara',
-        food: 'hamburguesa',
-    }],
+    orders: [],
 };
 
 const orderReducer = (state = initState, action) => {

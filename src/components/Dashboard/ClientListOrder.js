@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 
 class ClientListOrder extends Component{
-
-    deleteItem = (e) => {
-        e.preventDefault()
-        alert("no logro eliminarme D:")
-    }
     render(){
     return (
         <div>
-        {this.props.orderList.map((item, i) => {
+        {this.props.orderList.map((item, index) => {
             return (
-                <div key={i} className="row">
+                <div key={index} className="row">
                     <div className="col-md-6">
                         {item.name}
                     </div>
@@ -19,7 +14,9 @@ class ClientListOrder extends Component{
                         ${item.cost}
                     </div>
                     <div className="col-md-2">
-                        <a href="#" onClick={this.deleteItem}>
+                        <a href="#" onClick={() =>{
+                           this.props.orderList.splice(index, 1);
+                        }}>
                             <i className="material-icons">
                             cancel
                             </i>

@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 
 const KitchenOrder = ({orders}) => {
@@ -9,7 +10,8 @@ const KitchenOrder = ({orders}) => {
                     <div className="col-md-4"  key={order.id}>               
                 <div className="card text-white bg-success mb-3">
                     <div className="card-header">
-                        {order.name}
+                       <h4>{order.name}</h4>
+                       <p className="blockquote-footer"> {moment(order.date.toDate()).format('LT')} </p> 
                     </div>
                     <div className="card-body">
                         <p className="card-text">
