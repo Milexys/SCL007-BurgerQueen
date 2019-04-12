@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const KitchenButton = () => {
     return(
-        <div className="form-inline my-2 my-lg-0">
-            <NavLink to='/kitchen' className="btn btn-success my-2 my-lg-0">
+        <div className="form-inline">
+            <NavLink to='/kitchen' className="btn btn-success">
                 Cocina
             </NavLink>
         </div>

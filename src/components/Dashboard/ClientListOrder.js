@@ -14,13 +14,13 @@ class ClientListOrder extends Component{
                         ${item.cost}
                     </div>
                     <div className="col-md-2">
-                        <a href="#" onClick={() =>{
+                        {/* <a href="#" onClick={() =>{
                            this.props.orderList.splice(index, 1);
                         }}>
                             <i className="material-icons">
                             cancel
                             </i>
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             )

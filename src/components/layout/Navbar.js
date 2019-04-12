@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import KitchenButton from './KitchenButton';
+import NotificationButton from './NotificationButton';
 import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
@@ -10,7 +11,8 @@ class Navbar extends Component {
                     <img src="https://image.flaticon.com/icons/png/512/123/123278.png" width="30" height="30" className="mr-2" alt=""/>
                     Burger Queen
                 </Link>
-                <KitchenButton />
+                <NotificationButton />
+                <KitchenButton />               
             </nav>
         );
     }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ClientMenu from './ClientMenu';
 import ClientOrder from './ClientOrder.js';
 
-
 export class Dashboard extends Component {
   constructor(){
     super();
